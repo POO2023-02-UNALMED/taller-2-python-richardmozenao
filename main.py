@@ -19,7 +19,7 @@ class Asiento:
         self.registro = registro
 
     def cambiarColor(self,c):
-        if c in paleta:
+        if c in self.paleta:
             self.color = c
 
 class Auto:
@@ -44,4 +44,4 @@ class Auto:
                 return("Auto original")
 
 if __name__=="__main__":
-    print("")
+    print(Asiento.paleta)
