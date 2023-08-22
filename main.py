@@ -4,10 +4,10 @@ class Motor:
         self.tipo = tipo
         self.registro = registro
     
-    def cambiarRegistro(n):
+    def cambiarRegistro(self, n):
         self.registro = n
     
-    def asignarTipo(aTipo):
+    def asignarTipo(self, aTipo):
         if (aTipo == "electrico" or aTipo == "gasolina"):
             self.tipo = aTipo
 
@@ -18,7 +18,7 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-    def cambiarColor(c):
+    def cambiarColor(self,c):
         if c in paleta:
             self.color = c
 
@@ -32,10 +32,10 @@ class Auto:
         self.registro = registro
         self.cantidadCreados = 0
 
-    def cantidadAsientos():
+    def cantidadAsientos(self):
         return len(self.asientos)
     
-    def verificarIntegridad():
+    def verificarIntegridad(self):
         for i in range(len(self.asientos)):
             if self.registro != motor.registro or motor.registro != asiento.registro:
                 return("Las piezas no son originales")
@@ -44,5 +44,4 @@ class Auto:
                 return("Auto original")
 
 if __name__=="__main__":
-    bmw = Auto("bmw", 33000, list(),"tesla", Motor(4, "electrico", 142), 341)
-    print(bmw.marca)
+    print("")
