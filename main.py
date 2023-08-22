@@ -33,11 +33,15 @@ class Auto:
         self.cantidadCreados = 0
 
     def cantidadAsientos(self):
-        return len(self.asientos)
+        contador = 0
+        for i in range(len(self.asientos)):
+            if self.asientos[i] != None:
+                contador += 1
+        return contador
     
     def verificarIntegridad(self):
         for i in range(len(self.asientos)):
-            if self.registro != self.motor.registro or self.motor.registro != self.asiento.registro:
+            if self.registro != self.motor.registro or self.motor.registro != self.asientos[i].registro:
                 return("Las piezas no son originales")
                 break
             else:
